@@ -14,7 +14,8 @@ with codecs.open(
     try:
         version = re.findall(r"^__version__ = '([^']+)'$", fp.read(), re.M)[0]
     except IndexError:
-        raise RuntimeError('Unable to determine version.')
+        version = 1.2
+#         raise RuntimeError('Unable to determine version.')
 
 with open("README.rst", "r") as fh:
     long_description = fh.read()
